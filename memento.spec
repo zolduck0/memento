@@ -5,8 +5,8 @@ a = Analysis(
     ['memento.py'],
     pathex=[],
     binaries=[],
-    datas=[('assets', 'icon.ico')],
-    hiddenimports=[],
+    datas=[('assets', 'assets')],
+    hiddenimports=['PIL._tkinter_finder'],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
@@ -35,4 +35,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+    icon=['assets/icon.ico'],
 )

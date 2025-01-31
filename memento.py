@@ -1,14 +1,8 @@
-import sys
-import os
+import os.path
 import tkinter as tk
 from PIL import Image, ImageTk
 from datetime import date, timedelta, datetime
 import pytz
-
-if getattr(sys,"frozen",False):
-    iconPath = os.path.join(sys._MEIPASS,"assets","icon.ico")
-else:
-    iconPath = os.path.join('assets','icon.ico')
 
 # window
 root = tk.Tk()
@@ -16,8 +10,11 @@ root.title("memento")
 root.geometry("600x400")
 root.resizable(False,False)
 
-icon = "assets/icon.ico"
-root.iconbitmap(icon)
+baseIconDir = os.path.dirname(os.path.abspath(__file__))
+iconPath = os.path.join(baseIconDir,"assets","icon.png")
+
+icon = ImageTk.PhotoImage(file=iconPath)
+root.tk.call('wm','iconphoto',root._w,icon)
 
 welcomeFont = ("Arial", 20)
 font = ("Arial Narrow", 20)

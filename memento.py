@@ -62,7 +62,7 @@ todayDateLabel = tk.Label(root,text=todayDateFormat,font=font)
 todayDateLabel.grid(row=1,column=0,padx=10)
 
 #arrow
-arrow = Image.open("assets/arrow.png")
+arrow = Image.open(getAssetPath("assets/arrow.png"))
 arrowTk = ImageTk.PhotoImage(arrow)
 
 arrowLabel = tk.Label(root,image=arrowTk)

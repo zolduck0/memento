@@ -42,11 +42,11 @@ logoLabel = tk.Label(root,image=logoTk)
 logoLabel.place(relx=0, rely= 0.0, anchor="nw")
 
 #time
-time = datetime.now(pytz.timezone("America/Sao_Paulo"))
+time = datetime.now()
 timeFormat = time.strftime("%H:%M:%S")
 
 def timeUpdate():
-    time = datetime.now(pytz.timezone("America/Sao_Paulo"))
+    time = datetime.now()
     timeFormat = time.strftime("%H:%M:%S")
     timeLabel.config(text=timeFormat)
     root.after(1000,timeUpdate)

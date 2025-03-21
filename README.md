@@ -1,7 +1,10 @@
 # memento 📆
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
-### memento is a time keeping app for anxious people. Its purpose is to remind you how many days are there until christmas
-#### • will probably be updated each year
+### memento is a time keeping app for anxious people. Its purpose is to remind you how many days are there until Christmas.
+##### • Will probably be updated each year.
 
 <br> 
 
@@ -10,14 +13,14 @@
 
 ------
 
-### Features: <br>
-•Time-keeping abilities - down to the second <br>
+## Features: <br>
+#### •Time-keeping abilities - down to the second <br>
 
 
-•Cool UI <br>
+#### •Cool UI <br>
 
 
-•The secret to happiness 
+#### •The secret to happiness 
 
 <br>
 

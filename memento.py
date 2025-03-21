@@ -19,8 +19,7 @@ root.title("memento")
 root.geometry("600x400")
 root.resizable(False,False)
 
-baseIconDir = getAssetPath()
-iconPath = os.path.join(baseIconDir,"assets","icon.png")
+iconPath = getAssetPath("assets/icon.png")
 
 icon = ImageTk.PhotoImage(file=iconPath)
 root.tk.call('wm','iconphoto',root._w,icon)

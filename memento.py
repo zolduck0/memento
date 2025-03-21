@@ -17,6 +17,7 @@ root = tk.Tk()
 root.title("memento")
 root.geometry("600x400")
 root.resizable(False,False)
+root.tk.call('tk','scaling',1.0)
 
 iconPath = getAssetPath("assets/icon.png")
 
@@ -58,7 +59,7 @@ todayDate = date.today()
 todayDateFormat = todayDate.strftime("%d %B %Y")
 
 todayDateLabel = tk.Label(root,text=todayDateFormat,font=font)
-todayDateLabel.grid(row=1,column=0,padx=10)
+todayDateLabel.grid(row=1,column=0,padx=35)
 
 #arrow
 arrow = Image.open(getAssetPath("assets/arrow.png"))

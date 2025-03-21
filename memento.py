@@ -1,8 +1,17 @@
 import os.path
+import sys
 import tkinter as tk
 from PIL import Image, ImageTk
 from datetime import date, timedelta, datetime
 import pytz
+
+# assets location
+def getAssetPath(rel_path):
+    if getattr(sys,'frozen', False):
+        basePath = sys._MEIPASS
+    else:
+        basePath = os.path.dirname(__file__)
+    return os.path.join(basePath,rel_path)
 
 # window
 root = tk.Tk()
@@ -10,7 +19,7 @@ root.title("memento")
 root.geometry("600x400")
 root.resizable(False,False)
 
-baseIconDir = os.path.dirname(os.path.abspath(__file__))
+baseIconDir = getAssetPath()
 iconPath = os.path.join(baseIconDir,"assets","icon.png")
 
 icon = ImageTk.PhotoImage(file=iconPath)
@@ -25,7 +34,7 @@ welcomeLabel = tk.Label(root,text="Welcome",font=welcomeFont)
 welcomeLabel.grid(row=0,column=1,padx = 45,pady=70)
 
 # logo
-logo = Image.open("assets/logos.png")
+logo = Image.open(getAssetPath("assets/logos.png"))
 # logo = logo.resize((175,47),Image.Resampling.LANCZOS)
 
 logoTk = ImageTk.PhotoImage(logo)

@@ -3,7 +3,6 @@ import sys
 import tkinter as tk
 from PIL import Image, ImageTk
 from datetime import date, timedelta, datetime
-import pytz
 
 # assets location
 def getAssetPath(rel_path):
